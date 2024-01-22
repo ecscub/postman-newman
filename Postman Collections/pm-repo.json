@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "53fceb04-4ff2-4e90-bab3-43652b3830a9",
+		"name": "mypm_reqs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "650e0d7b-98d4-4c63-9fb9-613b160cdcf8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "619e63b6-3a16-4cc3-9b81-6366b861534d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{home-url}}v3.1/all?flag",
+					"host": [
+						"{{home-url}}v3",
+						"1"
+					],
+					"path": [
+						"all"
+					],
+					"query": [
+						{
+							"key": "flag",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
